@@ -21,4 +21,4 @@ for (var i=0; i<2; i++)
 }
 console.log(personalMovieDB)
 for(const movies in personalMovieDB.movies){
-document.write(movie + personalMovieDB.movies[movies] "<br>"
+document.write(movie + personalMovieDB.movies[movies] "<br>"}
