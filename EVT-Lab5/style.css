@@ -1,0 +1,90 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
+  }
+  .adaptive{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "first first second second"
+    "third third third third"
+    "fourth fourth fifth fifth"
+    "sixth seventh eighth ninth";
+  }
+  .adaptive article:nth-child(1){
+    grid-area: first;
+  }
+  .adaptive article:nth-child(2){
+    grid-area: second;
+  }
+  .adaptive article:nth-child(3){
+    grid-area: third;
+  }
+  .adaptive article:nth-child(4){
+    grid-area: fourth;
+  }
+  .adaptive article:nth-child(5){
+    grid-area: fifth;
+  }
+  .adaptive article:nth-child(6){
+    grid-area: sixth;
+  }
+  .adaptive article:nth-child(7){
+    grid-area: seventh;
+  }
+  .adaptive article:nth-child(8){
+    grid-area: eighth;
+  }
+  .adaptive article:nth-child(9){
+    grid-area: ninth;
+  }
+  
+  @media (min-width: 900px) and (max-width: 1400px){
+    .adaptive{
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: 
+      "first first first first"
+      "second second second second"
+      "third third third third"
+      "fourth fourth fifth fifth"
+      "sixth sixth seventh seventh"
+      "eighth eighth ninth ninth";
+    }
+  }
+  @media  (max-width: 900px){
+    .adaptive{
+      grid-template-rows: repeat(9, 1fr);
+      grid-template-areas: 
+      "first first first first"
+      "second second second second"
+      "third third third third"
+      "fourth fourth fourth fourth"
+      "fifth fifth fifth fifth"
+      "sixth sixth sixth sixth"
+      "seventh seventh seventh seventh"
+      "eighth eighth eighth eighth"
+      "ninth ninth ninth ninth";
+    }
+  }
