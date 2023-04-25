@@ -27,7 +27,8 @@ targets.forEach(target => {
   });
 
   target.addEventListener('mouseup', e => {
-    isDragging = false;
+      target.style.backgroundColor = 'red';
+      isDragging = false;
   });
 
   target.addEventListener('keydown', e => {
