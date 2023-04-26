@@ -29,6 +29,8 @@ targets.forEach(target => {
     }
     startX = touch.clientX - this.offsetLeft;
     startY = touch.clientY - this.offsetTop;
+    lastX = target.offsetLeft;
+    lastY = target.offsetTop;
   });
 
 
@@ -65,9 +67,7 @@ targets.forEach(target => {
   });
 
   target.addEventListener('touchcancel', function(e) {
-    if (currentTarget !== null) {
-      currentTarget.style.left = startX + 'px';
-      currentTarget.style.top = startY + 'px';
-    }
+      target.style.left = `${lastX}px`;
+      target.style.top = `${lastY}px`;
   });
 });
