@@ -71,8 +71,8 @@ targets.forEach(target => {
    console.log(isDoubleClick);
   });
 
-  // target.addEventListener('touchcancel', function(e) {
-  //     target.style.left = `${lastX}px`;
-  //     target.style.top = `${lastY}px`;
-  // });
+  target.addEventListener('touchcancel', function(e) {
+       target.style.left = `${lastX}px`;
+       target.style.top = `${lastY}px`;
+   });
 });
