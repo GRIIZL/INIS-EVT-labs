@@ -31,15 +31,16 @@ targets.forEach(target => {
     startY = touch.clientY - this.offsetTop;
     lastX = target.offsetLeft;
     lastY = target.offsetTop;
-  });
-
-
-  document.addEventListener('touchstart', function(e) {
      if (e.touches.lenght === 2)
     {
       target.style.left = `${lastX}px`;
       target.style.top = `${lastY}px`;
     }
+  });
+
+
+  document.addEventListener('touchstart', function(e) {
+
      if(isDoubleClick == true){
       const touch = e.changedTouches[0];
       const x = touch.clientX - startX;
