@@ -35,6 +35,11 @@ targets.forEach(target => {
 
 
   document.addEventListener('touchstart', function(e) {
+     if (e.touches.lenght === 2)
+    {
+      target.style.left = `${lastX}px`;
+      target.style.top = `${lastY}px`;
+    }
      if(isDoubleClick == true){
       const touch = e.changedTouches[0];
       const x = touch.clientX - startX;
@@ -58,11 +63,7 @@ targets.forEach(target => {
     this.style.left = x + 'px';
     this.style.top = y + 'px';
     }
-    if (e.touches.lenght === 2)
-    {
-      target.style.left = `${lastX}px`;
-      target.style.top = `${lastY}px`;
-    }
+    
    }
   );
 
